@@ -1,0 +1,7 @@
+@use '../../sass/colors.scss';
+
+.indicator {
+  color: colors.$color-primary-02;
+  font-size: 0.9rem;
+  letter-spacing: 5px;
+}

@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { AdviseCard } from './components/adviseCard/Component';
+import { useFetch } from './hooks/useFetch';
+
+const style = {
+  mainContainer: {
+    backgroundColor: 'hsl(218, 23%, 16%)',
+    width: '100%',
+    minWidth: '375px',
+    heigth: '100vh'
+  }
+}
+
+const url = 'https://api.adviceslip.com/advice';
 
 function App() {
+  const advice = useFetch(url);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={style.mainContainer}>
+      <AdviseCard  adviceData={advice}/>
+     
     </div>
   );
 }
