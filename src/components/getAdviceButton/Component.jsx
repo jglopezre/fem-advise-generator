@@ -4,7 +4,7 @@ import icon from '../../assets/icon-dice.svg'
 const {actionButton} = styles;
 
 
-export const GetAdviseButton = ({onAction}) => {
+export const GetAdviceButton = ({onAction}) => {
   return (
     <button className={actionButton} onClick={() => onAction()}>
       <img src={icon} />
