@@ -1,26 +1,26 @@
 import { AdviceCard } from './components/adviceCard/Component';
+import { Footer } from './components/footer/Component';
 import { useFetch } from './hooks/useFetch';
+import styles from './app.module.scss';
 
-const style = {
-  mainContainer: {
-    backgroundColor: 'hsl(218, 23%, 16%)',
-    width: '100%',
-    minWidth: '375px',
-    heigth: '100vh'
-  }
-}
+
+const {mainContainer} = styles;
 
 const url = 'https://api.adviceslip.com/advice';
 
 function App() {
-  const [ advice, fetchData ] = useFetch( url );
-
+  const [ advice, getNewAdvice ] = useFetch( url );
 
   return (
-    <div style={ style.mainContainer }>
-      <AdviceCard  adviceData={ advice } onAdviceAction={ fetchData  } url={ url }/>
-     
-    </div>
+    <>
+      <div className={mainContainer}>
+        <AdviceCard  adviceData={ advice } onAdviceAction={ getNewAdvice } url={ url }/>
+      </div>
+      <div>
+        <Footer />
+      </div>
+
+    </>
   );
 }
 

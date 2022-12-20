@@ -5,54 +5,61 @@ export const useFetch = (url) => {
   const [data, setData] = useState({
     isError: false,
     message: '',
-    fetchedData: {}
+    fetchedData: null
   })
 
+  const [isLoading, setIsLoading] = useState(true);
+
   const onFetching = async(url) => {
-    
+    setIsLoading(true);
+
     try {
       const response = await fetch(url);
       
       if(response.ok) {
         const fetchedData = await response.json();
+        setIsLoading(false);
+
         return {
           ...data,
-          fetchedData
-        }
-      
-
-        /* respObject.fetchedData = await response.json();
-        respObject.isError = false;
-        respObject.message = '' */
+          fetchedData,
+          isError: false,
+          message: '',
+        } 
       } else {
-        /* respObject.isError = true;
-        respObject.message = 'Disculpe, el contenido no esta disponible, intente luego'
-        respObject.fetchedData = {}; */
+        setIsLoading(false);
+
+        return {
+          ...data,
+          fetchedData: null,
+          isError: true,
+          message: 'Disculpe, el contenido no esta disponible, intente luego',
+        }
       }
-      
     } catch(err) {
-      /* respObject.isError = true;
-      respObject.message = `Disculpe, ocurrió un problema en la comunicación, intente de nuevo. Error: ${err}`
-      respObject.fetchedData = {}; */
+      setIsLoading(false);
+      
+      return {
+        ...data,
+        fetchedData: null,
+        isError: true,
+        message: `Disculpe, ocurrió un problema en la comunicación, intente de nuevo. Error: ${err}`,
+      }
     }
   };
 
-
- 
-  
+  const fetchData = (url) => {
     
- 
+    onFetching(url).then(setData);
+    console.log('boton presionado', data)
+    return {...data, isLoading};
+  };
 
-  /* const fetchData = (url) => {
-    onFetching(url).then(setFetchedData);
-    return fetchedData;
-  } */
-
-  onFetching(url).then(console.log)
- 
-
-  
-  return [{}, ()=>{}]
+  useEffect(() => {
+    onFetching(url).then(setData)
+  }, []);
+    
+  return [{...data, isLoading}, fetchData]
 } 
 
 

@@ -1,0 +1,9 @@
+@use './sass/colors.scss';
+
+.mainContainer {
+  background-color: colors.$color-neutral-03;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,24 +1,11 @@
-@use 'colors';
-
 :root {
   font-size: 16px;
   font-family: manrope, sans-serif;
 }
 
-html {
-  background-color: colors.$color-neutral-03;
-  margin: 0;
-  padding: 0;
-  body {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-  }
+html, body {
+  margin: 0px;
+  padding: 0px;
 }
-
-
 
 
