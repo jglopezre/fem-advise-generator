@@ -3,7 +3,6 @@ import { Footer } from './components/footer/Component';
 import { useFetch } from './hooks/useFetch';
 import styles from './app.module.scss';
 
-
 const {mainContainer} = styles;
 
 const url = 'https://api.adviceslip.com/advice';
@@ -19,7 +18,6 @@ function App() {
       <div>
         <Footer />
       </div>
-
     </>
   );
 }

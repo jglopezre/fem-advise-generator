@@ -3,11 +3,8 @@ import icon from '../../assets/icon-dice.svg'
 
 const {actionButton} = styles;
 
-
-export const GetAdviceButton = ({onAction}) => {
-  return (
-    <button className={actionButton} onClick={() => onAction()}>
-      <img src={icon} />
-    </button>    
-  )
-}
+export const GetAdviceButton = ({onAction}) => (
+  <button className={actionButton} onClick={() => onAction()}>
+    <img src={icon} />
+  </button> 
+)

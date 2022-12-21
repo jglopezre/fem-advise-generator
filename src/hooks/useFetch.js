@@ -49,9 +49,7 @@ export const useFetch = (url) => {
   };
 
   const fetchData = (url) => {
-    
     onFetching(url).then(setData);
-    console.log('boton presionado', data)
     return {...data, isLoading};
   };
 

@@ -1,0 +1,7 @@
+@use '../../sass/colors.scss';
+
+.quote {
+  color: colors.$color-primary-01;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
