@@ -1,10 +1,12 @@
+import { useResize } from '../../hooks/useResize';
 import { AdviceIndicator } from '../adviceIndicator/Component';
 import { DividerPattern } from '../dividerPattern/Component';
 import { GetAdviceButton } from '../getAdviceButton/Component';
+import { LoadingIndicator } from '../loadingIndicator/Component';
 import { Quote } from '../quote/Component';
 import styles from './style.module.scss'
 
-const { card, quote } = styles;
+const { card } = styles;
 
 
 export const AdviceCard = ({adviceData, onAdviceAction, url}) => {
@@ -16,7 +18,11 @@ export const AdviceCard = ({adviceData, onAdviceAction, url}) => {
         <AdviceIndicator number={isLoading ? 0 : fetchedData.slip.id}/>
       </div>
       <div>
-        <Quote citeText={isLoading ? 'cargando ...' : fetchedData.slip.advice} />
+        {
+          isLoading
+          ? <LoadingIndicator />
+          : <Quote citeText={fetchedData.slip.advice} />
+        }
       </div>
       <div>
         <DividerPattern />
