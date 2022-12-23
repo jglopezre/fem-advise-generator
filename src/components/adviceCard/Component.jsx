@@ -1,3 +1,4 @@
+import { WarningModal } from '../../helpers/warningModal';
 import { useResize } from '../../hooks/useResize';
 import { AdviceIndicator } from '../adviceIndicator/Component';
 import { DividerPattern } from '../dividerPattern/Component';
@@ -11,6 +12,7 @@ const { card } = styles;
 
 export const AdviceCard = ({adviceData, onAdviceAction, url}) => {
   const {isLoading, fetchedData} = adviceData;
+
   
   return (
     <div className={card}>

@@ -2,7 +2,7 @@
 
 .mainContainer {
   background-color: colors.$color-neutral-03;
-  height: 100vh;
+  height: max(100vh, 500px);
   display: flex;
   justify-content: center;
   align-items: center;
