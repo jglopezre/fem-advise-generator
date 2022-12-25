@@ -1,0 +1,40 @@
+.card {
+  width: max(350px, 30%);
+  background-color: orange;
+  border: solid darkorange 4px;
+  border-radius: 15px;
+  min-height: 200px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  > div:nth-child(1) {
+    flex-grow: 3;
+  }
+  > div:nth-child(2) {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  button {
+    max-width: 50%;
+    height: 32px;
+    border: none;
+    background-color: white;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    padding: {
+      left: 2rem;
+      right: 2rem;
+    }
+    &:hover {
+      background-color: yellow;
+      cursor: pointer;
+    }
+    &:active {
+      background-color: darkorange;
+      color: white;
+      box-shadow: 0 3px 1px rgba(0, 0, 0, 0.3);
+    }
+  }
+}

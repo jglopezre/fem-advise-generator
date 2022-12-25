@@ -1,0 +1,47 @@
+@use '../../sass/colors.scss';
+
+$animationSpeed: 1s;
+$interval: 0.2;
+
+@mixin pulsing($delay: 0) {
+  animation-name: pulse;
+  animation-duration: $animationSpeed;
+  animation-delay: $delay + s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+  from { height: 50%;}
+  5% { height: 80%;}
+  50% { height: 50%;}
+  to  { height: 50%;}
+}
+
+.barsContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  width: 50px;
+  > div {
+    width: 10px;
+    background-color: colors.$color-primary-02;
+    border-radius: 15px;
+  }
+
+  > div:nth-child(1) {
+    @include pulsing($interval);
+  }
+  > div:nth-child(2) {
+    @include pulsing(calc($interval * 2));
+  }
+  > div:nth-child(3) {
+    @include pulsing(calc($interval * 3));
+  }
+  > div:nth-child(4) {
+    @include pulsing(calc($interval * 4));
+  }
+}
+

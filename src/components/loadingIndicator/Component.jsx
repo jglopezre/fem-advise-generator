@@ -1,6 +1,14 @@
+import styles from './style.module.scss';
+
+const { barsContainer } = styles;
 
 export const LoadingIndicator = () => {
   return (
-    <h1>Cargando</h1>
+    <div className={ barsContainer }>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
   )
 }
