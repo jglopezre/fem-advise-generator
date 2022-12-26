@@ -5,6 +5,8 @@ const {actionButton} = styles;
 
 export const GetAdviceButton = ({onAction}) => (
   <button className={actionButton} onClick={() => onAction()}>
-    <img src={icon} />
+    <div>
+      <img src={icon} />
+    </div>
   </button> 
 )
