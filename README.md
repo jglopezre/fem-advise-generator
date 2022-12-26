@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./assets/screenshot)
+![](./screenshot)
 
 
 ### Links
@@ -51,8 +51,7 @@ Users should be able to:
 ### What I learned
 
  I was made this app for practicing hooks an custom hooks implementation, and for improving Atomic Design implementation on a React based project.
-I feel very confortable writing SASS code for styling, nested classes make coding more readable. like code below, where ```.actionButton``` is the class, but inside it has nested selector about the same class
-To see how you can add code snippets, see below:
+I feel very confortable writing SASS code for styling, nested classes make coding more readable. like code below, where ```.actionButton``` is the class, but inside it has nested selector about the same class.
 
 
 ```scss
