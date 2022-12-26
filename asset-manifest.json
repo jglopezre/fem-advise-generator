@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/fem-advise-generator/static/css/main.4980e195.css",
-    "main.js": "/fem-advise-generator/static/js/main.27973544.js",
+    "main.js": "/fem-advise-generator/static/js/main.2ba56d61.js",
     "static/js/787.51622139.chunk.js": "/fem-advise-generator/static/js/787.51622139.chunk.js",
     "static/media/Manrope-ExtraBold.ttf": "/fem-advise-generator/static/media/Manrope-ExtraBold.b0ac9f1b582da5d98892.ttf",
     "static/media/Manrope-Regular.ttf": "/fem-advise-generator/static/media/Manrope-Regular.25323263b2aac026e777.ttf",
@@ -10,11 +10,11 @@
     "static/media/pattern-divider-desktop.svg": "/fem-advise-generator/static/media/pattern-divider-desktop.ed9685263f6b47d21c8848f7d8bdd10e.svg",
     "static/media/pattern-divider-mobile.svg": "/fem-advise-generator/static/media/pattern-divider-mobile.aca38726412164df099c43d4f2fed72e.svg",
     "main.4980e195.css.map": "/fem-advise-generator/static/css/main.4980e195.css.map",
-    "main.27973544.js.map": "/fem-advise-generator/static/js/main.27973544.js.map",
+    "main.2ba56d61.js.map": "/fem-advise-generator/static/js/main.2ba56d61.js.map",
     "787.51622139.chunk.js.map": "/fem-advise-generator/static/js/787.51622139.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4980e195.css",
-    "static/js/main.27973544.js"
+    "static/js/main.2ba56d61.js"
   ]
 }
