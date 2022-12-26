@@ -14,7 +14,7 @@ export const useFetch = (url) => {
     setIsLoading(true);
 
     try {
-      const response = await fetch(url);
+      const response = await fetch(url, {cache: "no-store"});
       
       if(response.ok) {
         const fetchedData = await response.json();

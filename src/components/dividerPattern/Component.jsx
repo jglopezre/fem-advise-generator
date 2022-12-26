@@ -9,8 +9,8 @@ export const DividerPattern = () => {
     <>
       { 
         windowSize.width > 1280
-        ? <img src={desktopPattern}/>
-        : <img src={mobilePattern}/>
+        ? <img src={desktopPattern} alt="" />
+        : <img src={mobilePattern} alt="" />
       }
     </>
   )
